@@ -51,7 +51,6 @@ ss.analog_write(5, 255)
 
 print("Monster Eyes with CircuitPython")
 print("by Marius_450")
-#filename "/iris9.bmp"
 
 def draw_outlines():
     palette = displayio.Palette(2)
@@ -99,7 +98,7 @@ def sclera_processing(filename):
             dx = x - imgX/2
             t = math.ceil(math.atan2(dy,dx)%(2*math.pi)*tscale)
             #t = math.ceil(math.atan2(dy,dx)%(2*math.pi))
-            ## r = math.ceil(math.sqrt(dx**2+dy**2)*rscale)
+            #r = math.ceil(math.sqrt(dx**2+dy**2)*rscale)
             r = math.ceil(math.sqrt(dx**2+dy**2))
             if t > max_t:
                 max_t = t
@@ -115,11 +114,6 @@ def sclera_processing(filename):
     print(end - start, "s for", a, "iterations drawing sclera" )
     print("max_r =", max_r, "max_t = ", max_t )
 
-    #gc.collect()
-    #print(gc.mem_alloc(), gc.mem_free())
-
-    #gc.collect()
-    #print(gc.mem_alloc(), gc.mem_free())
     return sclera_tilegrid, right_sclera_tilegrid
 
 def iris_processing(filename):
