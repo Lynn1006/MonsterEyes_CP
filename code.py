@@ -172,7 +172,7 @@ def iris_processing(filename):
 # load iris texture, interpolate it on a circle, returns 2 tilegrids
 # BMP file, 8bits or 256 colors work fine (16 or 24bits bmp are unsupported)
 # 79x111 minimum
-left_iris_tilegrid, right_iris_tilegrid = iris_processing("/iris9.bmp")
+left_iris_tilegrid, right_iris_tilegrid = iris_processing("/iris.bmp")
 
 # fix memory error
 gc.collect()
@@ -181,7 +181,7 @@ gc.collect()
 # same for the sclera
 # BMP file, 8bits or 256 colors work fine (16 or 24bits bmp are unsupported)
 # 86x121 minimum
-left_eye, right_eye = sclera_processing("/sclera7.bmp")
+left_eye, right_eye = sclera_processing("/sclera.bmp")
 
 gc.collect()
 
